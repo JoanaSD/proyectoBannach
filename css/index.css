@@ -1,0 +1,294 @@
+* {
+    box-sizing: border-box;
+    }
+    
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed,
+    figure, figcaption, footer, header, hgroup,
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    }
+    /* HTML5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure,
+    footer, header, hgroup, menu, nav, section {
+    display: block;
+    }
+    
+    body {
+    line-height: 1;
+    font-family: 'Rubik', sans-serif;
+    
+    line-height: 1.5;
+    }
+    
+    ol, ul {
+    list-style: none;
+    }
+    
+    blockquote, q {
+    quotes: none;
+    }
+    
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+    content: '';
+    content: none;
+    }
+    
+    table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    }
+    
+    a {
+    color:inherit;
+    text-decoration: none;
+    }
+    
+    img {
+    width: 100%;
+    display: inline-block;
+    }
+
+/*END RESET*/
+
+
+p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 32px;
+    line-height: 1.2;
+    font-weight: 100;
+}
+
+a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+
+}
+
+li {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+li a, input {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: initial;
+}
+
+input {
+    border-style: none;
+}
+
+header {
+    position: sticky;
+    top:.5rem;
+    z-index: -1;
+    
+    margin: 0 20px;
+}
+
+section .text, .banner {
+    margin: 0 20px;
+}
+
+.logo {
+    width: 100%;
+}
+
+nav {
+    position: sticky;
+    top:0rem;
+    padding: 1rem;
+    z-index: 90;
+}
+
+nav.isFixed {
+    position:fixed;
+    width: 100%;
+    height: fit-content;
+    padding: 2rem;
+}
+
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 100px;
+    position: relative;
+}
+
+.nav {
+    bottom: 0;
+    left: 0;
+}
+
+.small-logo {
+    opacity: 0;
+    transition: .3s;
+    mix-blend-mode: difference;
+}
+
+.small-logo svg {
+    width: 100px;
+    height: 3vw;
+}
+
+.nav-ov {
+    display: none;
+    list-style: none;
+}
+
+#ov:hover .nav-ov {
+    display: flex;
+    position: absolute;
+}
+
+image {
+    width: 100%;
+}
+
+
+.banner--main {
+    margin-top:.5rem;
+    border-top: 1rem solid white;
+    background: url('https://bannach.eu/wp-content/uploads/2023/10/Bannach-Abbondio5-320cm-Detail-e1696944056155-1024x569.jpg');
+    min-height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.text {
+    margin: 60px;
+}
+
+.container-slider {
+    min-height: 300px;
+    display: flex;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.slider-inner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    transform: translateX();
+
+    transition: 5s;
+}
+
+.slider-img {
+    width: 100vw;
+    object-fit: cover;
+}
+
+.container-gallery {
+    max-width: 1440px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin: 2rem 2rem;
+}
+
+.container-gallery div {
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.container-gallery .foto1 {
+    background-image: url(../assets/img/Bannach-Abbondio2-320cm-Front-e1662015672714-1536x699.jpg);
+}
+
+.container-gallery .foto2 {
+    background-image: url(../assets/img/Bannach-Agatha-Pink-Perspective1-1536x1152.jpg);
+}
+
+.item-gallery-tittle p {
+    transform: translateY(1rem);
+    opacity: 0;
+    transition: all .3s;
+    font-size: 16px;
+}
+
+.foto1:hover .item-gallery-tittle p {
+    transform: translateY(0rem);
+    opacity: 1;
+}
+
+.foto2:hover .item-gallery-tittle p {
+    transform: translateY(0rem);
+    opacity: 1;
+}
+
+.text.text--main2 {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+footer {
+    margin: 0 20px;
+}
+
+.container-footer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 3rem;
+    margin: 2rem 2rem;
+}
+
+.item-footer.logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-footer.logo img {
+    width: 40px;
+}
+
+.item-footer.logo .copyright {
+    opacity: 0;
+}
+
+
+@media (max-width: 648px) {
+
+    .item-footer.logo {
+        justify-content: flex-end;
+        order: 1;
+    }
+    
+    .item-footer.logo .copyright {
+        opacity: 1;
+    }
+
+    .item-footer.list4 {
+        order: -2;
+    }
+}
